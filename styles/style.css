@@ -1,5 +1,35 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  font-family: "IBM Plex Mono", sans-serif;
+  padding: 10px;
+}
+
+.header {
+  block-size: 100vh;
+  min-height: 668px;
+}
+
+.title-focus {
+  color: var(--focus-title-color);
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 83%;
+}
+
+.title-focus_shadow-l {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--title-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
 }
