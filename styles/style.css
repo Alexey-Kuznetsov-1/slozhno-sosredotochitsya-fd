@@ -5,12 +5,98 @@
   background-attachment: fixed;
   background-color: var(--bg-color);
   font-family: "IBM Plex Mono", sans-serif;
-  padding: 10px;
+  padding: var(--page-padding);
 }
 
 .header {
   block-size: 100vh;
   min-height: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+}
+
+.header-rec {
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header-rec::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  top: 8px;
+  right: -18px;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  top: 10px;
+  right: 10px; 
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+  margin-block-start: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  background-color: transparent;
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  padding: 1.5px 13px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid #FF007066;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .title-focus {
@@ -28,8 +114,11 @@
   font-weight: 700;
   font-size: 18px;
   color: var(--title-color);
+  justify-self: end;
+  align-self: center;
 }
 
 .title-decor {
   background-color: var(--accent-color);
+  color: var(--title-color);
 }
