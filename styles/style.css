@@ -18,8 +18,8 @@
 
 .header-rec {
   position: absolute;
-  top: 10px;
-  right: 38px;
+  top: 16px;
+  right: 29px;
   color: var(--accent-color);
   font-size: 18px;
   line-height: 25px;
@@ -44,8 +44,8 @@
   height: 25px;
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
-  top: 10px;
-  right: 10px; 
+  top: 16px;
+  right: 1px; 
 }
 
 .decorated-zone::after {
@@ -55,20 +55,21 @@
   height: 25px;
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  bottom: 10px;
-  left: 10px;
+  bottom: 4px;
+  left: 1px;
 }
 
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  margin-block-start: 65px;
+  margin-block-start: 23px;
+  margin-inline-end: 5px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 17px;
 }
 
 .header__theme-menu-button {
@@ -113,9 +114,9 @@
 .title {
   font-weight: 700;
   font-size: 18px;
-  color: var(--title-color);
   justify-self: end;
   align-self: center;
+  line-height: 23.4px
 }
 
 .title-decor {
