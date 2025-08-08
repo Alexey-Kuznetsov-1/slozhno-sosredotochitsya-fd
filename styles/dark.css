@@ -9,4 +9,8 @@
   --button-title: #ff0070;
   --button-hover: #FF007066;
   --decor-color: #ff0070;
+
+  .header-rec {
+    display: block;
+}
 }

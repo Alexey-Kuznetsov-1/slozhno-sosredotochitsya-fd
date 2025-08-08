@@ -212,6 +212,7 @@
   .header {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 60px;
+    min-block-size: 747px;
   }
 
   .header__theme-menu {
@@ -219,6 +220,10 @@
     align-self: center;
     margin-bottom: 15px;
     margin-inline-end: 0px;
+  }
+
+  .title {
+    margin-bottom: 0;
   }
 
   .title-focus_tablet {
@@ -233,7 +238,7 @@
   .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 80px;
   }
 
@@ -273,6 +278,10 @@
   .gallery__image:nth-child(2),
   .gallery__image:nth-child(3) {
     grid-row: span 2;
+}
+
+.footer {
+  min-block-size: 777px;
 }
 }
 
