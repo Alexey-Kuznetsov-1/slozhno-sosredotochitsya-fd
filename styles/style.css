@@ -1,20 +1,20 @@
 .page {
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: var(--bg-color);
-  font-family: "IBM Plex Mono", sans-serif;
   padding: 10px;
+  font-family: "IBM Plex Mono", sans-serif;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
-  block-size: 100vh;
-  min-block-size: 668px;
+  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  position: relative;
   margin-bottom: 30px;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .header-rec {
@@ -29,35 +29,35 @@
 .header-rec::after {
   content: '';
   position: absolute;
+  top: 8px;
+  right: -18px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
-  top: 8px;
-  right: -18px;
+  background-color: var(--accent-color);
 }
 
 .decorated-zone::before {
   content: '';
   position: absolute;
+  top: 0;
+  right: 0;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  top: 0;
-  right: 0; 
+  border-right: 1px solid var(--accent-color); 
 }
 
 .decorated-zone::after {
   content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
   bottom: 20px;
   left: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
 }
 
 .header__theme-menu {
@@ -74,17 +74,17 @@
 
 .header__theme-menu-button {
   border: none;
-  background-color: transparent;
-  color: var(--accent-color);
+  padding: 1.5px 13px;
+  color: var(--button-title);
   font-size: 18px;
   line-height: 18px;
   text-transform: lowercase;
-  padding: 1.5px 13px;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #FF007066;
+  outline: 1px solid var(--button-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -92,11 +92,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--button-title);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--button-title);
   pointer-events: none;
 }
 
@@ -116,17 +116,17 @@
 }
 
 .title {
-  font-weight: 700;
-  font-size: 18px;
   justify-self: end;
   align-self: center;
-  line-height: 23.4px;
   margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 .title-decor {
-  background-color: var(--accent-color);
   color: var(--title-color);
+  background-color: var(--accent-color);
 }
 
 .section {
@@ -134,31 +134,31 @@
 }
 
 .section__title {
-  color: var(--accent-color);
-  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--section-title);
   font-weight: 700;
-  line-height: 23.4px;
-  margin-bottom: 20px;;
+  font-size: 18px;
+  line-height: 23.4px;;
 }
 
 .card__title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
   margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 .card__title_h4 {
-  font-weight: 400;
   margin-top: 20px;
+  font-weight: 400;
 }
 
 .card__text {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23.4px;
-  color: var(--text-color);
   margin-bottom: 20px;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 .card__text:last-child {
@@ -190,18 +190,18 @@
 }
 
 .gallery__image {
-  inline-size: 100%;
-  block-size: auto;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: auto;
 }
 
 .footer {
   position: relative;
-  block-size: 100vh;
-  min-block-size: 668px;
   display: grid;
   place-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 @media (width >= 768px) {
@@ -210,20 +210,21 @@
   }
 
   .header {
-    margin-bottom: 60px;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+    min-block-size: 748px;
   }
 
   .header__theme-menu {
+    grid-column: 2;
     align-self: end;
     margin-bottom: 15px;
     margin-inline-end: 0px;
-    grid-column: 2;
   }
 
   .title-focus_tablet {
-    margin-left: -20px;
     grid-column: 1 / 3;
+    margin-left: -20px;
   }
 
   .title_tablet {
@@ -274,13 +275,17 @@
   .gallery__image:nth-child(3) {
     grid-row: span 2;
 }
+
+.footer {
+  min-block-size: 768px;
+}
 }
 
 @media (width >= 1024px) {
   .header__theme-menu {
+    grid-column: 1 / 3;
     justify-self: center;
     align-self: start;
-    grid-column: 1 / 3;
 }
 
   .header__theme-menu-list {
@@ -289,9 +294,9 @@
   }
   
   .card_grid-desktop {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
-    display: grid;
   }
 
   .card_grid-desktop .card__title {
